@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <div class="player-selection">
+            <label>
+                <input type="radio" name="player" value="boy" checked onclick="setPlayer('boy')"> Boy
+            </label>
+            <label>
+                <input type="radio" name="player" value="girl" onclick="setPlayer('girl')"> Girl
+            </label>
+        </div>
+        <div class="game-area">
+            <div class="player" id="player-human">
+                <h2>You</h2>
+                <img id="human-choice" class="choice" src="" alt="">
+            </div>
+            <div class="vs">VS</div>
+            <div class="player" id="player-computer">
+                <h2>Computer</h2>
+                <img id="computer-choice" class="choice" src="" alt="">
+            </div>
+        </div>
+        <div class="choices">
+            <img src="rock-boy.png" alt="Rock" onclick="playGame('rock')" class="choice-btn">
+            <img src="paper-boy.png" alt="Paper" onclick="playGame('paper')" class="choice-btn">
+            <img src="scissors-boy.png" alt="Scissors" onclick="playGame('scissors')" class="choice-btn">
+        </div>
+        <div class="result">
+            <p id="result-text"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
